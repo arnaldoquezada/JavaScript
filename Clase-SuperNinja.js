@@ -18,8 +18,8 @@ class Ninja {
       console.log("----------------------------------")
 
   }
-  drinkSafe(addHealth){
-      this.health +=addHealth;
+  drinkSafe(){
+      this.health +=10;
       console.log("Se agrego 10 puntos de salud, quedando con: "+this.health + " Puntos");
   }
 }
@@ -40,6 +40,7 @@ class Sensei extends Ninja{
       
   }
   speakWisdow(){
+    super.drinkSafe();
     console.log("Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses.");
   }
   showStats(){
@@ -48,5 +49,5 @@ class Sensei extends Ninja{
   }
 }
 const superSensei = new Sensei("Master Sprinter")
-superSensei.drinkSafe(500);
-superSensei.showStats();
+// superSensei.drinkSafe(500);
+superSensei.speakWisdow();
